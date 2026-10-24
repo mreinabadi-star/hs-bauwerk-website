@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mreinabadi-star.github.io/hs-bauwerk-website/sitemap.xml
