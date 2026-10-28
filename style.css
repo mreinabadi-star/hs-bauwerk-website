@@ -10,3 +10,43 @@
 
 /* Transparent high resolution logo */
 .company-logo{background:transparent;border-radius:0;width:80px;height:64px}@media(max-width:700px){.company-logo{width:56px;height:44px}}@media(max-width:380px){.company-logo{width:44px;height:34px}}
+
+/* Mobile-first homepage presentation; desktop layout stays intact. */
+.mobile-menu,.mobile-hero-intro,.mobile-cta{display:none}
+@media(max-width:700px){
+.mobile-home header{position:relative;z-index:30;flex-wrap:nowrap;height:76px;min-height:76px;padding:8px 5%;gap:10px;background:var(--paper)}
+.mobile-home header>.brand{font-size:12px;letter-spacing:-.35px;gap:5px}
+.mobile-home header .company-logo{width:44px;height:42px}
+.mobile-home header>nav,.mobile-home .header-actions>.button{display:none}
+.mobile-home .header-actions{margin-inline-start:auto;gap:0}
+.mobile-home .languages{gap:0;font-size:11px}
+.mobile-home .languages a{padding:8px 5px}
+.mobile-menu{display:block;padding:0;border:0;flex-shrink:0}
+.mobile-menu summary{width:42px;height:44px;display:flex;flex-direction:column;justify-content:center;gap:5px;align-items:center;border:1px solid var(--line);border-radius:50%;list-style:none}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu summary:after{display:none}
+.mobile-menu summary span{width:17px;height:1.5px;background:var(--ink)}
+.mobile-menu-panel{position:absolute;top:100%;inset-inline:0;background:var(--paper);padding:16px 6% 24px;box-shadow:0 14px 22px #0002;display:grid;gap:4px;border-top:1px solid var(--line)}
+.mobile-menu-panel a{padding:13px;font-size:14px;border-bottom:1px solid var(--line)}
+.mobile-menu-panel .emergency-nav{margin-bottom:5px}
+.mobile-home .hero{position:relative;isolation:isolate;display:flex;align-items:end;min-height:550px;min-height:calc(88svh - 76px);background:#353c32}
+.mobile-home .hero-photo{position:absolute;inset:0;min-height:0;z-index:-1}
+.mobile-home .hero-photo>img{object-position:58% center}
+.mobile-home .hero-photo:after{background:linear-gradient(180deg,rgba(14,23,18,.08) 0%,rgba(14,23,18,.28) 30%,rgba(14,23,18,.82) 100%)}
+.mobile-home .photo-top,.mobile-home .photo-caption{display:none}
+.mobile-home .image-label{bottom:12px;inset-inline-start:6%;font-size:8px;color:#fff9}
+.mobile-home .hero-copy{width:100%;padding:110px 6% 48px;color:white}
+.mobile-home .hero .eyebrow{font-size:9px;letter-spacing:1.3px;color:#f2e9d6}
+.mobile-home .hero .eyebrow>span:first-child{background:#d7b77a}
+.mobile-home .hero h1{font-size:clamp(38px,10.5vw,66px);line-height:1.08;letter-spacing:-1.8px;margin:20px 0 16px;color:#fff;text-shadow:0 2px 18px #0002}
+.mobile-home .desktop-hero-end,.mobile-home .desktop-hero-intro,.mobile-home .desktop-cta,.mobile-home .hero-bottom{display:none}
+.mobile-home .mobile-hero-intro,.mobile-home .mobile-cta{display:block}
+.mobile-home .hero-copy>.mobile-hero-intro{color:#f3f1eb;font-size:14px;line-height:1.7;max-width:290px;margin:0}
+.mobile-home .hero-actions{margin-top:26px;display:flex;align-items:flex-start;flex-direction:column;gap:17px}
+.mobile-home .hero-actions>.button{background:#e9e4d4;color:#232b20;border-color:#e9e4d4;min-height:54px;padding:15px 22px;min-width:210px;font-weight:800}
+.mobile-home .hero-actions .text-link{color:#fff;font-size:12px;padding:3px 0}
+.mobile-home .service-strip{padding:20px 6%;gap:12px;letter-spacing:.6px;line-height:1.6}
+html[dir=rtl] .mobile-home .hero h1{font-size:clamp(36px,10vw,58px);line-height:1.4;letter-spacing:0}
+html[dir=rtl] .mobile-home .eyebrow{letter-spacing:0}
+}
+@media(max-width:360px){.mobile-home header{padding-inline:3%;gap:5px}.mobile-home header>.brand{font-size:11px}.mobile-home header .company-logo{width:34px}.mobile-home .hero-copy{padding-top:75px}.mobile-home .hero h1{font-size:38px}}
